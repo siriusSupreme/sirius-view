@@ -4,6 +4,7 @@ namespace Sirius\View;
 
 use InvalidArgumentException;
 use Sirius\Filesystem\Filesystem;
+use Sirius\View\Contracts\ViewFinderInterface;
 
 class FileViewFinder implements ViewFinderInterface
 {

@@ -57,8 +57,8 @@ class ViewServiceProvider extends ServiceProvider
      * Create a new Factory Instance.
      *
      * @param  \Sirius\View\Engines\EngineResolver  $resolver
-     * @param  \Sirius\View\ViewFinderInterface  $finder
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+     * @param  \Sirius\View\Contracts\ViewFinderInterface  $finder
+     * @param  \Sirius\Event\Contracts\Dispatcher  $events
      * @return \Sirius\View\Factory
      */
     protected function createFactory($resolver, $finder, $events)

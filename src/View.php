@@ -59,7 +59,7 @@ class View implements ArrayAccess, ViewContract
      * @param  string  $view
      * @param  string  $path
      * @param  mixed  $data
-     * @return void
+     *
      */
     public function __construct(Factory $factory, Engine $engine, $view, $path, $data = [])
     {
@@ -377,7 +377,7 @@ class View implements ArrayAccess, ViewContract
      * Remove a piece of bound data from the view.
      *
      * @param  string  $key
-     * @return bool
+     *
      */
     public function __unset($key)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sirius\View\Compilers;
+namespace Sirius\View\Contracts;
 
 interface CompilerInterface
 {

@@ -3,6 +3,7 @@
 namespace Sirius\View\Concerns;
 
 use InvalidArgumentException;
+use function Sirius\Support\e;
 use Sirius\View\Contracts\View;
 
 trait ManagesLayouts

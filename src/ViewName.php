@@ -2,6 +2,8 @@
 
 namespace Sirius\View;
 
+use Sirius\View\Contracts\ViewFinderInterface;
+
 class ViewName
 {
     /**

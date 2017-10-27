@@ -5,10 +5,10 @@ namespace Sirius\View;
 use Sirius\Support\Arr;
 use Sirius\Support\Str;
 use InvalidArgumentException;
-use Illuminate\Contracts\Events\Dispatcher;
+use Sirius\Event\Contracts\Dispatcher;
 use Sirius\Support\Contracts\Arrayable;
 use Sirius\View\Engines\EngineResolver;
-use Sirius\Container\Container;
+use Sirius\Container\Contracts\Container;
 use Sirius\View\Contracts\Factory as FactoryContract;
 
 class Factory implements FactoryContract
@@ -30,21 +30,21 @@ class Factory implements FactoryContract
     /**
      * The view finder implementation.
      *
-     * @var \Sirius\View\ViewFinderInterface
+     * @var \Sirius\View\Contracts\ViewFinderInterface
      */
     protected $finder;
 
     /**
      * The event dispatcher instance.
      *
-     * @var \Illuminate\Contracts\Events\Dispatcher
+     * @var \Sirius\Event\Contracts\Dispatcher
      */
     protected $events;
 
     /**
      * The IoC container instance.
      *
-     * @var \Illuminate\Contracts\Container\Container
+     * @var \Sirius\Container\Contracts\Container
      */
     protected $container;
 
@@ -84,8 +84,8 @@ class Factory implements FactoryContract
      * Create a new view factory instance.
      *
      * @param  \Sirius\View\Engines\EngineResolver  $engines
-     * @param  \Sirius\View\ViewFinderInterface  $finder
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+     * @param  \Sirius\View\Contracts\ViewFinderInterface  $finder
+     * @param  \Sirius\Event\Contracts\Dispatcher  $events
      * @return void
      */
     public function __construct(EngineResolver $engines, ViewFinderInterface $finder, Dispatcher $events)
@@ -469,7 +469,7 @@ class Factory implements FactoryContract
     /**
      * Get the view finder instance.
      *
-     * @return \Sirius\View\ViewFinderInterface
+     * @return \Sirius\View\Contracts\ViewFinderInterface
      */
     public function getFinder()
     {
@@ -479,7 +479,7 @@ class Factory implements FactoryContract
     /**
      * Set the view finder instance.
      *
-     * @param  \Sirius\View\ViewFinderInterface  $finder
+     * @param  \Sirius\View\Contracts\ViewFinderInterface  $finder
      * @return void
      */
     public function setFinder(ViewFinderInterface $finder)
@@ -500,7 +500,7 @@ class Factory implements FactoryContract
     /**
      * Get the event dispatcher instance.
      *
-     * @return \Illuminate\Contracts\Events\Dispatcher
+     * @return \Sirius\Event\Contracts\Dispatcher
      */
     public function getDispatcher()
     {
@@ -510,7 +510,7 @@ class Factory implements FactoryContract
     /**
      * Set the event dispatcher instance.
      *
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+     * @param  \Sirius\Event\Contracts\Dispatcher  $events
      * @return void
      */
     public function setDispatcher(Dispatcher $events)
@@ -521,7 +521,7 @@ class Factory implements FactoryContract
     /**
      * Get the IoC container instance.
      *
-     * @return \Illuminate\Contracts\Container\Container
+     * @return \Sirius\Container\Contracts\Container
      */
     public function getContainer()
     {
@@ -531,7 +531,7 @@ class Factory implements FactoryContract
     /**
      * Set the IoC container instance.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \Sirius\Container\Contracts\Container  $container
      * @return void
      */
     public function setContainer(Container $container)
