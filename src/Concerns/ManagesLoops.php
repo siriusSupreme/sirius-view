@@ -76,6 +76,8 @@ trait ManagesLoops
         if ($last = Arr::last($this->loopsStack)) {
             return (object) $last;
         }
+
+        return null;
     }
 
     /**

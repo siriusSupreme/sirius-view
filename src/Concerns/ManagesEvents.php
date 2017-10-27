@@ -80,6 +80,8 @@ trait ManagesEvents
         } elseif (is_string($callback)) {
             return $this->addClassEvent($view, $callback, $prefix);
         }
+
+        return null;
     }
 
     /**

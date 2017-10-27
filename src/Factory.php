@@ -3,10 +3,13 @@
 namespace Sirius\View;
 
 use Sirius\Support\Arr;
+use function Sirius\Support\collect;
 use Sirius\Support\Str;
 use InvalidArgumentException;
 use Sirius\Event\Contracts\Dispatcher;
 use Sirius\Support\Contracts\Arrayable;
+use function Sirius\Support\tap;
+use Sirius\View\Contracts\ViewFinderInterface;
 use Sirius\View\Engines\EngineResolver;
 use Sirius\Container\Contracts\Container;
 use Sirius\View\Contracts\Factory as FactoryContract;
@@ -86,7 +89,7 @@ class Factory implements FactoryContract
      * @param  \Sirius\View\Engines\EngineResolver  $engines
      * @param  \Sirius\View\Contracts\ViewFinderInterface  $finder
      * @param  \Sirius\Event\Contracts\Dispatcher  $events
-     * @return void
+     *
      */
     public function __construct(EngineResolver $engines, ViewFinderInterface $finder, Dispatcher $events)
     {

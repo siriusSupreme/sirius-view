@@ -3,6 +3,7 @@
 namespace Sirius\View\Concerns;
 
 use InvalidArgumentException;
+use function Sirius\Support\tap;
 
 trait ManagesStacks
 {

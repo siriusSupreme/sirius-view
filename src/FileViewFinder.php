@@ -49,7 +49,7 @@ class FileViewFinder implements ViewFinderInterface
      * @param  \Sirius\Filesystem\Filesystem  $files
      * @param  array  $paths
      * @param  array  $extensions
-     * @return void
+     *
      */
     public function __construct(Filesystem $files, array $paths, array $extensions = null)
     {

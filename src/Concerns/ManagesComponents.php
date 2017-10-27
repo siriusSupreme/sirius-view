@@ -3,6 +3,7 @@
 namespace Sirius\View\Concerns;
 
 use Sirius\Support\HtmlString;
+use function Sirius\Support\last;
 
 trait ManagesComponents
 {

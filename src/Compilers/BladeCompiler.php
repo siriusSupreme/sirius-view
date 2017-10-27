@@ -4,6 +4,7 @@ namespace Sirius\View\Compilers;
 
 use Sirius\Support\Arr;
 use Sirius\Support\Str;
+use Sirius\View\Contracts\CompilerInterface;
 
 class BladeCompiler extends Compiler implements CompilerInterface
 {

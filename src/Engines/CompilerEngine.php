@@ -4,14 +4,15 @@ namespace Sirius\View\Engines;
 
 use Exception;
 use ErrorException;
-use Sirius\View\Compilers\CompilerInterface;
+use function Sirius\Support\last;
+use Sirius\View\Contracts\CompilerInterface;
 
 class CompilerEngine extends PhpEngine
 {
     /**
      * The Blade compiler instance.
      *
-     * @var \Sirius\View\Compilers\CompilerInterface
+     * @var \Sirius\View\Contracts\CompilerInterface
      */
     protected $compiler;
 
@@ -25,8 +26,8 @@ class CompilerEngine extends PhpEngine
     /**
      * Create a new Blade view engine instance.
      *
-     * @param  \Sirius\View\Compilers\CompilerInterface  $compiler
-     * @return void
+     * @param  \Sirius\View\Contracts\CompilerInterface  $compiler
+     *
      */
     public function __construct(CompilerInterface $compiler)
     {
@@ -93,7 +94,7 @@ class CompilerEngine extends PhpEngine
     /**
      * Get the compiler implementation.
      *
-     * @return \Sirius\View\Compilers\CompilerInterface
+     * @return \Sirius\View\Contracts\CompilerInterface
      */
     public function getCompiler()
     {
