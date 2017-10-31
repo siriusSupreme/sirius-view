@@ -28,6 +28,6 @@ return [
     |
     */
 
-    'compiled' => realpath('framework/views'),
+    'compiled' => realpath('cached/views'),
 
 ];
