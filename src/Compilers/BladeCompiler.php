@@ -8,8 +8,7 @@ use Sirius\View\Contracts\CompilerInterface;
 
 class BladeCompiler extends Compiler implements CompilerInterface
 {
-    use Concerns\CompilesAuthorizations,
-        Concerns\CompilesComments,
+    use Concerns\CompilesComments,
         Concerns\CompilesComponents,
         Concerns\CompilesConditionals,
         Concerns\CompilesEchos,
@@ -19,8 +18,7 @@ class BladeCompiler extends Compiler implements CompilerInterface
         Concerns\CompilesLayouts,
         Concerns\CompilesLoops,
         Concerns\CompilesRawPhp,
-        Concerns\CompilesStacks,
-        Concerns\CompilesTranslations;
+        Concerns\CompilesStacks;
 
     /**
      * All of the registered extensions.

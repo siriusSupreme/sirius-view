@@ -20,8 +20,7 @@ class Factory implements FactoryContract
         Concerns\ManagesEvents,
         Concerns\ManagesLayouts,
         Concerns\ManagesLoops,
-        Concerns\ManagesStacks,
-        Concerns\ManagesTranslations;
+        Concerns\ManagesStacks;
 
     /**
      * The engine implementation.
@@ -66,7 +65,7 @@ class Factory implements FactoryContract
     protected $extensions = [
         'blade.php' => 'blade',
         'php' => 'php',
-        'css' => 'file',
+        'html' => 'file',
     ];
 
     /**
